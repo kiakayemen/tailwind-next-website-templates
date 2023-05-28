@@ -12,7 +12,7 @@ export default function LoopStudios() {
 				<title>Loop Studios project</title>
 			</Head>
 			{/* Hero Section */}
-			<section id={styles.hero}>
+			<section id={styles.hero} className='dark'>
 				{/* hero container */}
 				<div className="container max-w-6xl mx-auto px-6 py-12">
 					{/* header (menu and nav and logo) */}
