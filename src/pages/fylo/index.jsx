@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import Head from "next/head"
-import styles from "./index.module.css"
 
 import { useState, useEffect } from "react"
 
@@ -36,19 +35,21 @@ const FyloPage = () => {
 
 	useEffect(() => { console.table(darkMode, window.localStorage.darkMode) }, [darkMode])
 
-	return (
-		<div className={`${darkMode && 'dark'}`}>
-			<Head>
-				<title>Fylo</title>
-			</Head>
+	return (<>
+		<Head>
+			<title>Fylo</title>
+		</Head>
+		<div className={`${darkMode? 'dark'  : ""}`}>
 			<div className=" dark:bg-darkBlue dark:text-white">
 
 				{/* header */}
-				<header className="container mx-auto pt-10 px-6 text-center h-40 md:h-20">
+				<header className="dark:bg-darkBlue bg-white  md:sticky top-0 shadow-lg container mx-auto py-14 mb-4 z-[999] px-6 text-center h-40 md:h-20">
 					<nav className="flex flex-col md:flex-row justify-center items-center">
 						{/* logo */}
+						<Link href="/">
 						<div className="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10">
 						</div>
+						</Link>
 						{/* menu */}
 						<div className="flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10">
 							<div className="group">
@@ -110,7 +111,7 @@ const FyloPage = () => {
 				<section className="pt-12 bg-gray-50 dark:bg-darkBlue1">
 
 					{/* Features container */}
-					<div className="conainer mx-auto px-6 pb-32">
+					<div id="features" className="conainer mx-auto px-6 pb-32">
 						{/* first row */}
 						<div className="flex my-20 flex-col mx-20 space-y-24 md:space-x-10 text-center md:flex-row md:space-y-0">
 							{/* item 1 */}
@@ -274,7 +275,7 @@ const FyloPage = () => {
 				{/* Early Access */}
 				<section id="early-access" className="relative px-6 dark:bg-darkBlue2 md:px-0">
 					<div className="relative -top-40 max-w-4xl mx-auto p-10 px-6 space-y-6 text-center rounded-lg bg-gray-200 dark:bg-darkBlue1 md:px-16">
-						<h5 className="w-full text-2xl static p-0 text-center font-bold">Get early access today</h5>
+						<h5 className="w-full text-2xl text-black dark:text-white static p-0 text-center font-bold">Get early access today</h5>
 						<p className="text-sm">
 							It only takes a minute to sign up and our free starter tier is
 							extremely generous. If you have any questions, our support team would
@@ -283,9 +284,9 @@ const FyloPage = () => {
 						{/* <!-- Input & Button Container --> */}
 						<div className="flex flex-col items-start space-y-6 md:flex-row md:space-y-0 md:space-x-6">
 							<div className="w-full md:flex-1">
-								<input type="text" className="w-full px-10 py-3 rounded-full focus:outline-none" placeholder="email@example.com" />
+								<input type="text" className="w-full px-10 py-3 rounded-full dark:text-black focus:outline-none" placeholder="email@example.com" />
 							</div>
-							<button className="w-full p-3 px-6 rounded-full bg-accentCyan md:w-56 hover:scale-95">
+							<button className="w-full p-3 px-6 rounded-full text-black bg-accentCyan md:w-56 hover:scale-95">
 								Get Started For Free
 							</button>
 						</div>
@@ -365,6 +366,7 @@ const FyloPage = () => {
 				</footer>
 			</div>
 		</div>
+	</>
 	)
 }
 

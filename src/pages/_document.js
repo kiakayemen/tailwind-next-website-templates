@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body
-        className={`${josefinSans.className} selection:bg-[#f28600] selection:text-black`}
+        className={`md:scroll-smooth ${josefinSans.className} selection:bg-[#f28600] selection:text-black`}
       >
         <Main />
         <NextScript />
