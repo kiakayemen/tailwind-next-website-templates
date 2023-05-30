@@ -43,7 +43,7 @@ const FyloPage = () => {
 			<div className=" dark:bg-darkBlue dark:text-white">
 
 				{/* header */}
-				<header className="dark:bg-darkBlue bg-white  md:sticky top-0 shadow-lg container mx-auto py-14 mb-4 z-[999] px-6 text-center h-40 md:h-20">
+				<header className="dark:bg-darkBlue bg-white  md:sticky top-0 shadow-lg container mx-auto py-8 md:py-14 mb-4 z-[999] px-6 text-center md:h-20">
 					<nav className="flex flex-col md:flex-row justify-center items-center">
 						{/* logo */}
 						<Link href="/">
@@ -102,7 +102,7 @@ const FyloPage = () => {
 						</h1>
 						<p className="text-md md:text-xl">Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
 						</p>
-						<button className="bg-accentCyan rounded-full text-lg py-3 px-14 mt-10 capitalize dark:text-white font-[300]
+						<button className="bg-accentCyan rounded-full text-lg py-3 px-14 mt-10 capitalize text-black font-[300]
 						hover:scale-95">get started</button>
 					</div>
 				</section>
