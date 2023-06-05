@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import styles from "./Menu.module.css"
@@ -11,7 +12,7 @@ const Menu = () => {
     setMenuOpen(!menuOpen);
   }
 
-  
+
   return (
     <>
       {/* nav/logo container */}
@@ -49,19 +50,21 @@ const Menu = () => {
         {/* hamburger btn */}
         <div className="md:hidden">
           <button
-            onClick={handleHamburgerClick}
+            onClick={
+              handleHamburgerClick
+              }
             id="menu-btn"
             type="button"
-            className={`z-40 block ${styles.hamburger} md:hidden focus:outline-none ${menuOpen&&styles.open}`}>
-              <span className={`${styles.hamburgerTop}`}></span>
-              <span className={`${styles.hamburgerMiddle}`}></span><span className={`${styles.hamburgerBottom}`}></span>
+            className={`z-40 block ${styles.hamburger} md:hidden focus:outline-none ${menuOpen && styles.open}`}>
+            <span className={`${styles.hamburgerTop}`}></span>
+            <span className={`${styles.hamburgerMiddle}`}></span><span className={`${styles.hamburgerBottom}`}></span>
           </button>
         </div>
       </nav>
 
       {/* mobile menu */}
-  
-      <div id="menu" className={`bg-white text-black absolute top-0 left-0 bottom-0 ${menuOpen?"flex":"hidden"} flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg dark:text-white dark:bg-black uppercase`}>
+
+      <div id="menu" className={`bg-white text-black absolute top-0 left-0 bottom-0 ${menuOpen ? "flex" : "hidden"} flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg dark:text-white dark:bg-black uppercase`}>
         <Link className="hover:text-pink-500" href="#">about</Link>
         <Link className="hover:text-pink-500" href="#">careers</Link>
         <Link className="hover:text-pink-500" href="#">events</Link>

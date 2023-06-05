@@ -1,16 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
-import Head from 'next/head'
 import Image from 'next/image'
 import styles from './index.module.css'
 import Menu from './components/Menu'
 
+
+	export const metadata = {
+		title: "Loop Studios project",
+	};
 export default function LoopStudios() {
 	return (
 		<>
-			<Head>
-				<title>Loop Studios project</title>
-			</Head>
 			{/* Hero Section */}
 			<section id={styles.hero} className='dark'>
 				{/* hero container */}
